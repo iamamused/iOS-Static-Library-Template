@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>This template provides a starting point for an iPhone OS static library. It provides an includes directory to store library specific files as well as a demo applcation for quick development. You can then include this project in other projects and link it as a static library. See http://jeffreysambells.com/iphone-os-static-library-template/ for more information.</string>
+</dict>
+</plist>
