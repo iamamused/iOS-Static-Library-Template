@@ -18,7 +18,7 @@
 		DD7CFA0911721C4B0028A53F /* ___PROJECTNAMEASIDENTIFIER____Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* ___PROJECTNAMEASIDENTIFIER____Prefix.pch */; };
 		DD7CFA0D11721CC20028A53F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		DD7CFA3711721D890028A53F /* ___PROJECTNAMEASIDENTIFIER___.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7CFA3611721D890028A53F /* ___PROJECTNAMEASIDENTIFIER___.h */; };
-		DDED24731178085C00DAD7DB /* lib___PROJECTNAMEASIDENTIFIER___.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___.a */; };
+		DDED24731178085C00DAD7DB /* lib___PROJECTNAMEASIDENTIFIER___Mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___Mobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ___PROJECTNAMEASIDENTIFIER____Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "___PROJECTNAMEASIDENTIFIER____Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ___PROJECTNAMEASIDENTIFIER___-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "___PROJECTNAMEASIDENTIFIER___-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "lib___PROJECTNAMEASIDENTIFIER___.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___Mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "lib___PROJECTNAMEASIDENTIFIER___Mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7CF970117211070028A53F /* ___PROJECTNAMEASIDENTIFIER___.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "___PROJECTNAMEASIDENTIFIER___.framework-Info.plist"; sourceTree = "<group>"; };
 		DD7CFA3611721D890028A53F /* ___PROJECTNAMEASIDENTIFIER___.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "___PROJECTNAMEASIDENTIFIER___.h"; path = "include/___PROJECTNAMEASIDENTIFIER___/___PROJECTNAMEASIDENTIFIER___.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDED24731178085C00DAD7DB /* lib___PROJECTNAMEASIDENTIFIER___.a in Frameworks */,
+				DDED24731178085C00DAD7DB /* lib___PROJECTNAMEASIDENTIFIER___Mobile.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* ___PROJECTNAMEASIDENTIFIER___.app */,
-				DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___.a */,
+				DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___Mobile.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 			);
 			name = "___PROJECTNAMEASIDENTIFIER___Mobile";
 			productName = "___PROJECTNAMEASIDENTIFIER___Mobile";
-			productReference = DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___.a */;
+			productReference = DD7CF8E911720A330028A53F /* lib___PROJECTNAMEASIDENTIFIER___Mobile.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +280,12 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "___PROJECTNAMEASIDENTIFIER____Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/include/\"";
 				INFOPLIST_FILE = "___PROJECTNAMEASIDENTIFIER___-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "___PROJECTNAMEASIDENTIFIER___";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -322,7 +327,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PREBINDING = NO;
-				PRODUCT_NAME = "___PROJECTNAMEASIDENTIFIER___";
+				PRODUCT_NAME = "___PROJECTNAMEASIDENTIFIER___Mobile";
 				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
